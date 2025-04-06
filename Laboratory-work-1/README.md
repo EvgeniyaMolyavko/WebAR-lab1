@@ -1,1 +1,1 @@
-https://github.com/EvgeniyaMolyavko/WebAR-lab1
+https://github.com/OS-IS/ai242-molyavko/tree/main
