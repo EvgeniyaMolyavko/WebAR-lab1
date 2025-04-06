@@ -19,7 +19,7 @@
     <script src="threex/threex-arbasecontrols.js"></script>
     <script src="threex/threex-armarkercontrols.js"></script>
 </head>
- 
+
 <body style='margin : 0px; overflow: hidden; font-family: Monospace; user-select: none; pointer-events: none;'>
 
     <div id="access" style="top: 0; left: 0; right:0; bottom: 0; background: #000; position: absolute; user-select: all; pointer-events: all;">
@@ -27,9 +27,9 @@
                 text-transform: uppercase; font-family: Arial, Helvetica, sans-serif; font-weight: 400; line-height: 1.5em; font-size: large; white-space: nowrap;
                 user-select: none; pointer-events: none;
             ">
-            Натисніть на екран для отримання доступу 
+            Натисніть на екран для отримання доступу
             <br>
-            до WebAR-буклету «Арифмометри»
+            до WebAR-буклету "Арифмометр"
         </div>
     </div>
 
@@ -153,31 +153,31 @@
 
                 // Масив назв файлів .patt. Масив заповнюється в порядку додавання маркерів
                 // якщо замість .patt було додано баркод, на його місце в масив додається порожній рядок
-                const patternNames = ["" ,"" ,"" ,"" ,""];
+                const patternNames = ["" ,"" ,"patternImage.patt"];
                 // Масив баркодів, заповнюється одночасно з масивом патернів
                 // якщо замість баркоду був доданий .patt, на його місце масив додається -1
-                const patternBarcode = [1 ,2 ,3 ,4 ,5];
+                const patternBarcode = [1 ,2 ,3];
                 // Масив типів контенту кожного маркера, заповнюється значеннями: зображення, модель, відео
-                const modes = ["image" ,"image" ,"image" ,"image" ,"image"];
+                const modes = ["image" ,"image" ,"image"];
                 // Масив файлів моделей, якщо немає моделі буде додано порожній рядок
-                const modelFiles = ["" ,"" ,"" ,"" ,""];
+                const modelFiles = ["" ,"" ,""];
                 // Масив файлів зображень, якщо немає зображення буде додано також порожній рядок
-                const imageFiles = ["Знімок екрана 2025-03-16 о 4.28.00 пп.jpg" ,"Знімок екрана 2025-03-16 о 5.33.34 пп.jpg" ,"Знімок екрана 2025-03-16 о 5.39.41 пп.jpg" ,"Знімок екрана 2025-03-16 о 5.51.39 пп.jpg" ,"Знімок екрана 2025-03-16 о 6.02.55 пп.jpg"];
+                const imageFiles = ["Знімок екрана 2025-03-16 о 4.28.00 пп.png" ,"карлТомасБіо.jpg" ,"арифмометрТомаса.jpg"];
                 // Масив файлів відео, якщо немає відео буде ще один порожній рядок
-                const videoFiles = ["" ,"" ,"" ,"" ,""];
+                const videoFiles = ["" ,"" ,""];
                 // Масив файлів аудіо, якщо немає аудіо буде так само порожній рядок
-                const audioFiles = ["Молявко Євгенія Олек.mp3" ,"Карл Ксав є Томас де.mp3" ,"Арифмометр Томаса мн.mp3" ,"Вільгард Теофіл Одне.mp3" ,"Вільгод Однер заціка.mp3"];
+                const audioFiles = ["Молявко Євгенія Олек.mp3" ,"Карл Ксав є Томас де.mp3" ,"Арифмометр Томаса мн.mp3"];
                 // Масив опцій повтору аудіо та відео контенту, по дефолту для всіх буде false
-                const repeatOptions = ["false" ,"false" ,"false" ,"false" ,"false"];
+                const repeatOptions = ["false" ,"false" ,"false"];
   
                 // Створюємо масив для всіх маркерів
                 const markerRoots = [];
-                for (let i = 0; i < 5; i++) {
+                for (let i = 0; i < 3; i++) {
                     markerRoots[i] = new THREE.Group();
                 }
   
                 // Проходимо по кожному маркеру з масиву і додаємо його в головний контейнер
-                for (let i = 0; i < 5; i++) {
+                for (let i = 0; i < 3; i++) {
                     mainContainer.add(markerRoots[i]);
 
                     // Якщо поточний маркер – це баркод, створюємо AR контролер під баркод
